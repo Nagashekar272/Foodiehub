@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In</title>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #88b26a, #ffcc70);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .signup-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 300px;
+      text-align: center;
+    }
+
+    .signup-box h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .signup-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .signup-box button {
+      width: 100%;
+      padding: 10px;
+      background: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .signup-box button:hover {
+      background: #e05244;
+    }
+
+    .signup-box p {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .signup-box a {
+      color: #ff6f61;
+      text-decoration: none;
+    }           
+    </style>
+</head>
+<body>
+    <div class="signup-box">
+    <h2>New User</h2>
+    <form action="" method="post">
+      <input type="text" name="Firstname" placeholder="Enter your firstname" required>
+      <input type="text" name="Lastname" placeholder="Enter your lasstname" required>
+      <input type="number" name="Mobile" placeholder="Enter your Mobile number" required>
+      <input type="text" name="username" placeholder="Enter Username" required>
+      <input type="password" name="password" placeholder="Enter Password" required>
+      <button type="submit">Create new account</button>
+    </form>
+  </div>
+</body>
+</html>

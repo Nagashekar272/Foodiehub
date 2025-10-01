@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodieHub</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    nav {
+        background-color: #1a1a1a;
+        padding: 12px 30px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        border-radius: 8px;
+        margin: 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ff4d4d;
+        letter-spacing: 1px;
+        margin-right: 20px;
+    }
+
+    .nav-items {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        align-items: center;
+        gap: 10px;
+        position: relative; /* Needed for dropdown */
+    }
+
+    .nav-items a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: all 0.3s;
+    }
+
+    .nav-items a:hover {
+        background-color: #ff4d4d;
+        color: white;
+    }
+
+    .offer {
+        background-color: #ff1a1a;
+        font-weight: bold;
+    }
+
+    .offer:hover {
+        background-color: #b30000;
+    }
+
+    .sign-in {
+        border: 2px solid white;
+    }
+
+    .sign-in:hover {
+        background-color: white;
+        color: #1a1a1a;
+    }
+
+    .sign-up {
+        background-color: #00cc44;
+    }
+
+    .sign-up:hover {
+        background-color: #009933;
+    }
+
+    input[type="text"] {
+        padding: 6px 12px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 150px;
+        transition: width 0.3s;
+    }
+
+    input[type="text"]:focus {
+        width: 220px;
+    }
+
+    /* Dropdown menu for Restaurants */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background-color: #333;
+        min-width: 150px;
+        border-radius: 5px;
+        overflow: hidden;
+        z-index: 1000;
+    }
+
+    .dropdown-content a {
+        display: block;
+        padding: 8px 12px;
+        color: white;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ff4d4d;
+    }
+
+    .show {
+        display: block;
+    }
+    .items{
+        
+        background-color: blueviolet;
+        background-size: cover;
+        margin-left: 25px;
+        margin-right: 20px;
+    }
+    .items a{
+        text-align: center;
+        text-decoration: dashed;
+        color: white;
+        padding: 80px;
+        background-attachment:scroll;
+    }
+    .scroll img{
+        height: 150px;
+        width: 150px;
+    }
+    .specials{
+        display: flex;
+        text-align: center;
+    }
+    .specials span{
+        padding: 80px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        border: 1px solid rgb(66, 61, 61);              
+        border-radius: 8px;
+        margin: 20px;
+        background-color: rgb(231, 239, 239);
+    }
+    span img{
+        height: 300px;
+        width: 300px;
+        border-radius: 30px;
+    }
+    .info{
+        display: flex;
+        background-color: #333;
+        color: white;
+    }
+    .info h3{
+        padding-left: 250px;
+        font-style: italic;
+    }
+    .menu-bar{
+        text-align: center;
+        background-color: cornflowerblue;
+        padding: 5px;
+        background-size: cover;
+        border-radius: 1000px;
+    }
+</style>
+</head>
+<body>
+    <nav>
+        <a href="home.html" class="logo">FoodieHub</a>
+        <div class="nav-items">
+            <a href="home.html">Home</a>
+
+            <!-- Dropdown for Restaurants -->
+            <div class="dropdown">
+                <a href="#" onclick="toggleDropdown()">Restaurants ▼</a>
+                <div id="restaurantDropdown" class="dropdown-content">
+                    <a href="#">Pizza Palace</a>
+                    <a href="#">Burger Hub</a>
+                    <a href="#">Sushi World</a>
+                    <a href="#">Taco Town</a>
+                </div>
+            </div>
+
+            <a href="offer50.html" class="offer">50% Offer</a>
+            <a href="offer80.html" class="offer">80% Offer</a>
+            <input type="text" placeholder="Search...">
+            <a href="orders.html">Orders</a>
+            <a href="signin.html" class="sign-in">Sign In</a>
+            <a href="signup.html" class="sign-up">Sign Up</a>
+        </div>
+    </nav>
+    <div class="items">
+        <hr>
+        <a href="">Chicken Biryani</a>
+        <a href="">Veg Biryani</a>
+        <a href="">Paneer Biryani</a>
+        <a href="">Mutton Biryani</a>
+        <a href="">Pizza</a>
+        <a href="">Burger</a>
+        <hr>
+    </div>
+    <marquee behavior="scroll" direction="left">
+        <h1>Welcome to FoodieHub!</h1>
+        <h5>- Hungry? We bring it home</h5>
+    </marquee>
+    <div class="specials">
+        <span>
+            <img src="./images/b6.jpeg" alt="">
+            <p>Dum Biryani :- 250/-</p>
+            <button>Order</button>
+        </span>
+        <span>
+            <img src="./images/p4.jpeg" alt="">
+            <p>Paneer Biryani :- 150/-</p>
+            <button>Order</button>
+        </span>
+        <span>
+            <img src="./images/v5.jpeg" alt="">
+            <p>Veg Biryani :- 120/-</p>
+            <button>Order</button>
+        </span>
+        
+    </div>
+    <div class="specials">
+        <span>
+            <img src="./images/v3.jpeg" alt="">
+            <p>Veg Biryani :- 150/-</p>
+            <button>Order</button>
+        </span>
+        <span>
+            <img src="./images/m1.jpeg" alt="">
+            <p>Mutton Biryani :- 300/-</p>
+            <button>Order</button>
+        </span>
+        <span>
+            <img src="./images/m3.jpeg" alt="">
+            <p>Mutton Biryani :- 280/-</p>
+            <button>Order</button>
+        </span>
+    </div>
+    <div class="scroll">
+        <marquee behavior="scroll" direction="all">
+        <img src="./images/b1.jpeg" alt="">
+        <img src="./images/b10.jpeg" alt="">
+        <img src="./images/p1.jpeg" alt="">
+        <img src="./images/p3.jpeg" alt="">
+        <img src="./images/v1.jpeg" alt="">
+        <img src="./images/v4.jpeg" alt="">
+        <img src="./images/v6.jpeg" alt="">
+        <img src="./images/b3.jpeg" alt="">
+        <img src="./images/b1.jpeg" alt="">
+        <img src="./images/p5.jpeg" alt="">
+        <img src="./images/v5.jpeg" alt="">
+    </marquee>
+    </div>
+    <div class="specials">
+        <span>
+            <img src="./images/c1.jpeg" alt="">
+        </span>
+        <span>
+            <img src="./images/c2.jpeg" alt="">
+        </span>
+        <span>
+            <img src="./images/c3.jpeg" alt="">
+        </span>
+    </div>
+    <div class="specials">
+        <span>
+            <img src="./images/br1.jpeg" alt="">
+        </span>
+        <span>
+            <img src="./images/br2.jpeg" alt="">
+        </span>
+        <span>
+            <img src="./images/br3.jpeg" alt="">
+        </span>
+    </div>
+<h1 class="menu-bar">One menu. Many smiles</h1>
+<div class="info">
+    <div class="Biryani">
+        <h3>Chicken Biryani</h3>
+        <h3>Mutton Biryani</h3>
+        <h3>Veg Biryani</h3>
+        <h3>Paneer Biryani</h3>
+        <h3>Fried Piece Biryani</h3>
+    </div>
+    <div class="Pizza">
+        <h3>Margherita pizza</h3>
+        <h3>Sicilian pizza</h3>
+        <h3>Cheese pizza</h3>
+        <h3>Meat pizza</h3>
+        <h3>BBQ chicken pizza</h3>
+    </div>
+    <div class="Burger">
+        <h3>Cheeseburger</h3>
+        <h3>Chicken Burger</h3>
+        <h3>Veggie Burger</h3>
+        <h3>Bison Burgers</h3>
+        <h3>Portobello mushroom burger</h3>
+    </div>
+</div>
+
+    <script>
+        function toggleDropdown() {
+            document.getElementById("restaurantDropdown").classList.toggle("show");
+        }
+
+        // Close dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown a')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].classList.remove('show');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
